@@ -365,7 +365,7 @@ func (p *Properties) init(typ reflect.Type, name, tag string, f *reflect.StructF
 	// "bytes,49,opt,def=hello!"
 	p.Name = name
 	p.OrigName = name
-	if tag == "" {
+	if tag == "" || tag == "-" {
 		return
 	}
 	p.Parse(tag)
